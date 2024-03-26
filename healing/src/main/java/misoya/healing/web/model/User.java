@@ -1,4 +1,4 @@
-package misoya.healing.model;
+package misoya.healing.web.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
