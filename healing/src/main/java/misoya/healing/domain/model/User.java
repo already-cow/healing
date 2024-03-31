@@ -15,9 +15,10 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 자동 증가
     private Long id;
 
-    private String userid;
+    private String userId;
     private String password;
-    private String username;
+    private String userName;
+    private String userEmail;
 
     public User() {
     }
