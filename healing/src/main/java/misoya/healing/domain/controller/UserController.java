@@ -5,11 +5,13 @@ import misoya.healing.domain.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @Slf4j
 @RestController
 @RequestMapping("/user")
-public class UserController{
+public class UserController {
 
     @Autowired
     private UserService userService;
@@ -20,6 +22,8 @@ public class UserController{
         return "New user save";
     }
 
-
-
+    @GetMapping("/getAll")
+    public List<User> getAllUser() {
+        return userService.getAllUser();
+    }
 }
