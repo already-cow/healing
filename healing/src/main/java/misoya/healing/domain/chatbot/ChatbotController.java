@@ -22,4 +22,6 @@ public class ChatbotController {
     public List<Chatbot> getChatbotData() throws IOException {
         return chatbotService.loadChatbotData();
     }
+
+
 }

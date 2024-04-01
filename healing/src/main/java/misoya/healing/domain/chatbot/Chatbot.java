@@ -1,20 +1,35 @@
 package misoya.healing.domain.chatbot;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
+import org.springframework.context.annotation.Profile;
 
 @Data
 public class Chatbot {
-    @JsonProperty("persona")
-    private Persona persona;
 
-    @JsonProperty("emotion")
-    private Emotion emotion;
+    @JsonProperty("profile")
+    private Profile profile;
 
     @JsonProperty("talk")
     private Talk talk;
 
 
+        public static class Profile {
+
+            @JsonProperty("persona-id")
+            private String personaId;
+
+            @JsonProperty("persona")
+            private Persona persona;
+
+            @JsonProperty("emotion")
+            private Emotion emotion;
+
+            public Profile() {
+            }
+        }
+
         public static class Persona {
+
             @JsonProperty("persona-id")
             private String personaId;
 
@@ -26,23 +41,22 @@ public class Chatbot {
 
             public Persona() {
             }
-
         }
 
-        public static class Emotion {
-            @JsonProperty("emotion-id")
-            private String emotionId;
+    public static class Emotion {
 
-            @JsonProperty("type")
-            private String type;
+        @JsonProperty("emotion-id")
+        private String emotionId;
 
-            @JsonProperty("situation")
-            private String[] situation;
+        @JsonProperty("type")
+        private String type;
 
-            public Emotion() {
-            }
+        @JsonProperty("situation")
+        private String[] situation;
 
+        public Emotion() {
         }
+    }
 
         public static class Talk {
             @JsonProperty("id")

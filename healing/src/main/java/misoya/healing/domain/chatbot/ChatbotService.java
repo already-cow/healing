@@ -19,4 +19,6 @@ public class ChatbotService {
         ClassPathResource resource = new ClassPathResource("chat-data.json");
         return Arrays.asList(objectMapper.readValue(resource.getInputStream(), Chatbot[].class));
     }
+
+
 }
