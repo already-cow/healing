@@ -1,4 +1,4 @@
-package misoya.healing.redis;
+package misoya.healing.domain.redis;
 
 import org.springframework.data.repository.CrudRepository;
 

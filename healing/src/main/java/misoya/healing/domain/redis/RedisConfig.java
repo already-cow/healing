@@ -1,4 +1,4 @@
-package misoya.healing.redis;
+package misoya.healing.domain.redis;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
