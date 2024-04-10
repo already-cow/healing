@@ -20,8 +20,13 @@ public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 자동 증가
     private Long id;
+
+    // UK
+    @Column(unique = true)
     private String userid;
+
     private String password;
+
     private String username;
     // 04.05 security 추가하면서..
     @Convert(converter = UserRole.UserRoleConverter.class)
