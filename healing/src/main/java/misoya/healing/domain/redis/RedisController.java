@@ -1,7 +1,7 @@
+package misoya.healing.domain.redis;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import misoya.healing.redis.RedisService;
-import misoya.healing.redis.RedisUser;
 import org.springframework.web.bind.annotation.*;
 
 /************

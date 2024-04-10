@@ -1,4 +1,4 @@
-package misoya.healing.redis;
+package misoya.healing.domain.redis;
 
 import jakarta.persistence.Id;
 import lombok.*;
